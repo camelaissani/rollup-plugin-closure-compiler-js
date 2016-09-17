@@ -25,6 +25,8 @@ rollup({
 });
 ```
 
+See [closure-compiler-js documentation](https://github.com/google/closure-compiler-js#flags) for more information about options. 
+
 # License
 
 MIT ©
