@@ -1,0 +1,41 @@
+{
+  "name": "rollup-plugin-closure-compiler-js",
+  "version": "1.0.0",
+  "description": "Rollup plugin to invoke google-closure-compiler-js.",
+  "main": "dist/rollup-plugin-closure-compiler-js.js",
+  "jsnext:main": "dist/rollup-plugin-closure-compiler-js.es.js",
+  "scripts": {
+    "build": "rollup -c",
+    "pretest": "npm run build",
+    "test": "mocha test/*.js --compilers js:babel-core/register",
+    "prepublish": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camelaissani/rollup-plugin-closure-compiler-js.git"
+  },
+  "keywords": [
+    "rollup",
+    "rollup-plugin",
+    "closure-compiler",
+    "closure-compiler-js"
+  ],
+  "author": "Camel Aissani <camel.aissani@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/camelaissani/rollup-plugin-closure-compiler-js/issues"
+  },
+  "homepage": "https://github.com/camelaissani/rollup-plugin-closure-compiler-js#readme",
+  "dependencies": {
+    "google-closure-compiler-js": "^20160916.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-es2015-rollup": "^1.2.0",
+    "mocha": "^3.0.2",
+    "rollup": "^0.35.11",
+    "rollup-plugin-babel": "^2.6.1"
+  }
+}
