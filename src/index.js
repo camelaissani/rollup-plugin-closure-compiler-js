@@ -1,23 +1,25 @@
 import {compile} from 'google-closure-compiler-js';
+import logger from './logger';
 
-export default function (flags = {}) {
+export default function clojure(options = {}) {
     return {
         name: 'closure-compiler-js',
 
-        transformBundle(code, options) {
-            // trigger sourcemap generation
-            if (options.sourceMap !== false) {
-                flags.createSourceMap = true;
-            }
+        transformBundle(code) {
 
-            flags.jsCode = [{
+            options.jsCode = [{
                 src: code
             }];
-            const {compiledCode, sourceMap} = compile(flags);
+            options.createSourceMap = true;
 
-            const result = {code: compiledCode};
-            if (sourceMap) {
-                result.map = sourceMap;
+            const output = compile(options);
+            if (logger(options, output)) {
+                throw {message: `Compilation error, ${output.errors.length} errors`};
+            }
+
+            const result = {code: output.compiledCode};
+            if (output.sourceMap) {
+                result.map = output.sourceMap;
             }
 
             return result;
