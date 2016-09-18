@@ -15,17 +15,17 @@ npm i rollup-plugin-closure-compiler-js -D
 
 ```js
 import { rollup } from 'rollup';
-import compiler from 'rollup-plugin-closure-compiler-js';
+import closure from 'rollup-plugin-closure-compiler-js';
 
 rollup({
     entry: 'main.js',
     plugins: [
-        compiler()
+        closure()
     ]
 });
 ```
 
-See [closure-compiler-js documentation](https://github.com/google/closure-compiler-js#flags) for more information about options. 
+See [closure-compiler-js documentation](https://github.com/google/closure-compiler-js#flags) for more information about options.
 
 # License
 

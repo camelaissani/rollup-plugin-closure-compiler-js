@@ -1,7 +1,7 @@
 import {compile} from 'google-closure-compiler-js';
 import logger from './logger';
 
-export default function clojure(options = {}) {
+export default function closure(options = {}) {
     return {
         name: 'closure-compiler-js',
 
