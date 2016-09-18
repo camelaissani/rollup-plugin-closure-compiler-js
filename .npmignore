@@ -1,2 +1,6 @@
+.babelrc
+.travis.yml
+.gitginore
+rollup.config.js
 test
 coverage
