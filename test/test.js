@@ -38,23 +38,23 @@ describe('rollup-plugin-closure-compiler-js', function() {
         });
     });
 
-    // TODO: uncomment this code after be sure that closure-compiler sourceMap is compatible with rollup
-    // it('should compile with sourcemaps', () => {
-    //     return rollup({
-    //         entry: 'fixtures/sourcemap.js',
-    //         plugins: [ closure() ],
-    //     }).then(bundle => {
-    //         const { map } = bundle.generate({
-    //             format: 'cjs',
-    //             sourceMap: true
-    //         });
+    // TODO: check that closure-compiler sourceMap is compatible with rollup
+    it('should compile with sourcemaps', () => {
+        return rollup({
+            entry: 'fixtures/sourcemap.js',
+            plugins: [ closure() ],
+        }).then(bundle => {
+            const { map } = bundle.generate({
+                format: 'cjs',
+                sourceMap: true
+            });
 
-    //         assert.ok(map, 'has a source map');
-    //         assert.equal(map.version, 3, 'source map has expected version');
-    //         assert.ok(Array.isArray(map.sources), 'source map has sources array');
-    //         assert.equal(map.sources.length, 2, 'source map has two sources');
-    //         assert.ok(Array.isArray(map.names), 'source maps has names array');
-    //         assert.ok(map.mappings, 'source map has mappings');
-    //     });
-    // });
+            assert.ok(map, 'has a source map');
+            assert.equal(map.version, 3, 'source map has expected version');
+            assert.ok(Array.isArray(map.sources), 'source map has sources array');
+            assert.equal(map.sources.length, 2, 'source map has two sources');
+            assert.ok(Array.isArray(map.names), 'source maps has names array');
+            assert.ok(map.mappings, 'source map has mappings');
+        });
+    });
 });
