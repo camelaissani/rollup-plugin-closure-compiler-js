@@ -20,7 +20,7 @@ describe('rollup-plugin-closure-compiler-js', function() {
             });
             const jsFile = readFileSync('fixtures/unminified.js', 'utf-8');
             const { compiledCode } = compile({jsCode: [{src: jsFile}]});
-            assert.equal(code, compiledCode);
+            assert.equal(code, compiledCode+'\n');
         });
     });
 
@@ -34,11 +34,10 @@ describe('rollup-plugin-closure-compiler-js', function() {
             const { code } = bundle.generate({
                 format: 'cjs'
             });
-            assert.equal(code, 'var foo="bar";var t=1+2;console.log(foo);console.log(t);');
+            assert.equal(code, 'var foo="bar";var t=1+2;console.log(foo);console.log(t);\n');
         });
     });
 
-    // TODO: check that closure-compiler sourceMap is compatible with rollup
     it('should compile with sourcemaps', () => {
         return rollup({
             entry: 'fixtures/sourcemap.js',
