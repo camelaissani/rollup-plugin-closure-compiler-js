@@ -56,4 +56,18 @@ describe('rollup-plugin-closure-compiler-js', function() {
             assert.ok(map.mappings, 'source map has mappings');
         });
     });
+
+    it('bug with e6getter', () => {
+        return rollup({
+            entry: 'fixtures/es6getter.js',
+            plugins: [ closure() ]
+        }).then(bundle => {
+            const { code, map } = bundle.generate({
+                format: 'cjs',
+                sourceMap: true
+            });
+            assert(code);
+            assert(map);
+        });
+    });
 });
