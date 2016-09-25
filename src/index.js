@@ -2,7 +2,6 @@ import {compile} from 'google-closure-compiler-js';
 import logger from './logger';
 
 export default function closure(flags = {}) {
-    let rollupOpts;
     return {
         name: 'closure-compiler-js',
         transformBundle(code) {
