@@ -5,8 +5,10 @@ export default function closure(flags = {}) {
     return {
         name: 'closure-compiler-js',
         transformBundle(code) {
-            flags.createSourceMap = true;
-            flags.processCommonJsModules = true;
+            flags = Object.assign({
+              createSourceMap: true,
+              processCommonJsModules: true
+            }, flags);
             flags.jsCode = [{
                 src: code
             }];
