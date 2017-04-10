@@ -1,7 +1,10 @@
-# rollup-plugin-closure-compiler-js [![Travis Build Status][travis-img]][travis]
+# rollup-plugin-closure-compiler-js
 
-[travis-img]: https://travis-ci.org/camelaissani/rollup-plugin-closure-compiler-js.svg
-[travis]: https://travis-ci.org/camelaissani/rollup-plugin-closure-compiler-js
+[![Build Status](https://travis-ci.org/camelaissani/rollup-plugin-closure-compiler-js.svg)](https://travis-ci.org/camelaissani/rollup-plugin-closure-compiler-js)
+[![latest version](https://img.shields.io/npm/v/rollup-plugin-closure-compiler-js.svg)](https://www.npmjs.com/package/rollup-plugin-closure-compiler-js)
+[![license](https://img.shields.io/npm/l/rollup-plugin-closure-compiler-js.svg)](https://github.com/camelaissani/rollup-plugin-closure-compiler-js/blob/master/LICENSE)
+[![dependencies Status](https://david-dm.org/camelaissani/rollup-plugin-closure-compiler-js/status.svg)](https://david-dm.org/camelaissani/rollup-plugin-closure-compiler-js)
+[![devDependencies Status](https://david-dm.org/camelaissani/rollup-plugin-closure-compiler-js/dev-status.svg)](https://david-dm.org/camelaissani/rollup-plugin-closure-compiler-js?type=dev)
 
 [Rollup](https://github.com/rollup/rollup) plugin to invoke google-closure-compiler-js.
 
