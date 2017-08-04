@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-closure-compiler-js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Rollup plugin to invoke google-closure-compiler-js.",
   "main": "dist/rollup-plugin-closure-compiler-js.js",
   "jsnext:main": "dist/rollup-plugin-closure-compiler-js.es.js",
