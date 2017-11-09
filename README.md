@@ -9,7 +9,7 @@
 [![latest version](https://img.shields.io/npm/v/rollup-plugin-closure-compiler-js.svg)](https://www.npmjs.com/package/rollup-plugin-closure-compiler-js)
 [![npm](https://img.shields.io/npm/dt/rollup-plugin-closure-compiler-js.svg)](https://www.npmjs.com/package/rollup-plugin-closure-compiler-js)
 
-[Rollup](https://github.com/rollup/rollup) plugin to invoke google-closure-compiler-js.
+[Rollup](https://github.com/rollup/rollup) plugin for optimizing JavaScript with google-closure-compiler-js.
 
 ## Install
 
